@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Ishtiak Rahman Azmi — Visual Designer & Video Editor." />
+  <meta name="theme-color" content="#090909" />
+  <title>Ishtiak Rahman Azmi — Visual Designer & Video Editor</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="page-transition" id="pageTransition" aria-hidden="true"><span></span></div>
+
+  <div class="site-shell">
+    <header class="topbar">
+      <button class="brand-button" data-view="profile" aria-label="Open profile view">ISHTIAK<span>.</span></button>
+      <div class="topbar-right">
+        <div class="availability"><i></i>Available for Freelance, Remote & Contract Work</div>
+        <a class="instagram-button" href="https://www.instagram.com/ishtiak_rahman_azmi?stkn=MXE0Mm1pc3h0dDZiYQ%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener" aria-label="Open Ishtiak Rahman Azmi on Instagram">Instagram ↗</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme"><b></b><span>LIGHT</span></button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="view active" id="profileView" data-view-name="profile">
+        <h1 class="sr-only">Ishtiak Rahman Azmi — Visual Designer & Video Editor</h1>
+
+        <section class="dashboard-grid" aria-label="Portfolio profile dashboard">
+          <article class="dash-card intro-card g-intro reveal">
+            <div class="card-top"><span>01 / PROFILE</span><span>Mymensingh, BD</span></div>
+            <div class="intro-main">
+              <div class="role-line"><i></i><span>I am a</span><strong id="roleText">visual designer.</strong></div>
+              <p class="intro-copy">I create bold visual identities, digital designs, and video content that help brands communicate clearly and stand out.</p>
+            </div>
+            <div class="intro-name">ISHTIAK<br>RAHMAN AZMI</div>
+          </article>
+
+          <article class="dash-card portrait-card g-portrait reveal">
+            <img src="assets/images/portrait.webp" alt="Ishtiak Rahman Azmi" />
+            <div class="portrait-footer"><span>VISUAL DESIGNER</span><span>VIDEO EDITOR</span></div>
+          </article>
+
+          <article class="dash-card globe-card g-globe reveal">
+            <div class="card-top"><span>CLIENT REACH</span><span class="live-chip">LIVE</span></div>
+            <canvas id="globeCanvas" aria-label="Interactive globe showing client reach in Bangladesh, United States and New Zealand"></canvas>
+            <div class="globe-footer"><strong>Bangladesh · United States · New Zealand</strong><span>Drag to rotate</span></div>
+          </article>
+
+          <article class="dash-card kinetic-card g-kinetic reveal" aria-label="Continuous motion visual">
+            <div class="card-top"><span>MOTION SIGNAL</span><span>∞</span></div>
+            <div class="kinetic-orbit" aria-hidden="true">
+              <svg class="kinetic-svg" viewBox="0 0 220 220" aria-hidden="true">
+                <defs>
+                  <path id="motionPathA" d="M20 110 A90 62 0 1 0 200 110 A90 62 0 1 0 20 110"/>
+                  <path id="motionPathB" d="M42 110 A68 50 0 1 0 178 110 A68 50 0 1 0 42 110"/>
+                  <path id="motionPathC" d="M61 110 A49 37 0 1 0 159 110 A49 37 0 1 0 61 110"/>
+                </defs>
+                <g class="motion-orbit orbit-a-svg" transform="rotate(8 110 110)"><use href="#motionPathA"/><circle r="7" class="motion-dot dot-a"><animateMotion dur="7s" repeatCount="indefinite"><mpath href="#motionPathA"/></animateMotion></circle></g>
+                <g class="motion-orbit orbit-b-svg" transform="rotate(-10 110 110)"><use href="#motionPathB"/><circle r="7" class="motion-dot dot-b"><animateMotion dur="5.5s" repeatCount="indefinite"><mpath href="#motionPathB"/></animateMotion></circle></g>
+                <g class="motion-orbit orbit-c-svg" transform="rotate(5 110 110)"><use href="#motionPathC"/><circle r="7" class="motion-dot dot-c"><animateMotion dur="4s" repeatCount="indefinite"><mpath href="#motionPathC"/></animateMotion></circle></g>
+              </svg>
+              <b>IA</b>
+            </div>
+            <div class="kinetic-caption">Always moving.<br>Never noisy.</div>
+          </article>
+
+          <article class="dash-card statement-card g-statement reveal">
+            <div class="card-top"><span>CREATIVE POSITIONING</span><span>DESIGN + MOTION</span></div>
+            <p>I turn ideas into <em>clear visual systems</em>, campaign design and motion-driven stories built to hold attention.</p>
+            <div class="skill-cloud" aria-label="Capabilities">
+              <span>Brand Identity</span><span>Social Design</span><span>Campaigns</span><span>Editorial</span><span>Motion</span><span>Video Editing</span>
+            </div>
+          </article>
+
+          <article class="dash-card clock-card g-clock reveal">
+            <div class="card-top"><span>LOCAL TIME</span><span>GMT+6</span></div>
+            <div class="clock-stage">
+              <div class="analog-clock" aria-hidden="true">
+                <i class="tick t12"></i><i class="tick t3"></i><i class="tick t6"></i><i class="tick t9"></i>
+                <span class="hand hour-hand" id="hourHand"></span><span class="hand minute-hand" id="minuteHand"></span><span class="hand second-hand" id="secondHand"></span><b class="clock-pin"></b>
+              </div>
+            </div>
+            <div class="clock-footer" id="digitalClock">--:--:-- / DHAKA</div>
+          </article>
+
+          <article class="dash-card radar-card g-radar reveal">
+            <div class="card-top"><span>CREATIVE MIX</span><span>BY WORK TYPE</span></div>
+            <div class="radar-stage">
+              <svg viewBox="0 0 360 280" role="img" aria-label="Creative skill radar chart">
+                <defs>
+                  <linearGradient id="radarStroke" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff5b1a"/><stop offset=".28" stop-color="#f0d93e"/><stop offset=".54" stop-color="#37de8d"/><stop offset=".76" stop-color="#41a5ff"/><stop offset="1" stop-color="#d45cff"/></linearGradient>
+                  <radialGradient id="radarFill"><stop offset="0" stop-color="#8f58ff" stop-opacity=".08"/><stop offset=".55" stop-color="#44b7ff" stop-opacity=".12"/><stop offset="1" stop-color="#ff5b1a" stop-opacity=".22"/></radialGradient>
+                </defs>
+                <g class="radar-grid" transform="translate(180 135)">
+                  <polygon points="0,-96 83,-48 83,48 0,96 -83,48 -83,-48"/>
+                  <polygon points="0,-72 62,-36 62,36 0,72 -62,36 -62,-36"/>
+                  <polygon points="0,-48 41,-24 41,24 0,48 -41,24 -41,-24"/>
+                  <polygon points="0,-24 21,-12 21,12 0,24 -21,12 -21,-12"/>
+                  <line x1="0" y1="0" x2="0" y2="-96"/><line x1="0" y1="0" x2="83" y2="-48"/><line x1="0" y1="0" x2="83" y2="48"/><line x1="0" y1="0" x2="0" y2="96"/><line x1="0" y1="0" x2="-83" y2="48"/><line x1="0" y1="0" x2="-83" y2="-48"/>
+                  <polygon class="radar-fill" points="0,-76 76,-43 69,42 0,82 -59,37 -72,-42"/>
+                </g>
+                <g class="radar-labels"><text x="180" y="19">BRAND</text><text x="303" y="83">CONTENT</text><text x="311" y="207">CAMPAIGN</text><text x="180" y="273">VIDEO</text><text x="50" y="207">EDITORIAL</text><text x="49" y="83">MOTION</text></g>
+              </svg>
+            </div>
+          </article>
+
+          <article class="dash-card toolkit-card g-tools reveal">
+            <div class="card-top"><span>TOOLKIT</span><span>06</span></div>
+            <div class="tool-marquee"><div class="tool-track">
+              <div class="tool-set"><span>PHOTOSHOP</span><span>ILLUSTRATOR</span><span>PREMIERE PRO</span><span>AFTER EFFECTS</span><span>CANVA</span><span>CAPCUT</span></div>
+              <div class="tool-set" aria-hidden="true"><span>PHOTOSHOP</span><span>ILLUSTRATOR</span><span>PREMIERE PRO</span><span>AFTER EFFECTS</span><span>CANVA</span><span>CAPCUT</span></div>
+            </div></div>
+          </article>
+
+          <article class="dash-card contact-card g-contact reveal">
+            <div class="card-top"><span>CONTACT</span><span>OPEN</span></div>
+            <div class="contact-grid">
+              <a href="mailto:ishtiakrahmanazmiiiiiii@gmail.com"><span>Email</span><strong>Send a message ↗</strong></a>
+              <a href="https://wa.me/8801770224334" target="_blank" rel="noopener"><span>WhatsApp</span><strong>+880 1770 224334 ↗</strong></a>
+              <a href="https://www.linkedin.com/in/ishtiak-rahman-azmi-281227393" target="_blank" rel="noopener"><span>LinkedIn</span><strong>Connect ↗</strong></a>
+              <button type="button" id="openCv"><span>CV</span><strong>View CV ↗</strong></button>
+            </div>
+          </article>
+
+          <article class="dash-card cv-card g-cv reveal" id="cvQuick">
+            <div class="card-top"><span>CV</span><span>2026</span></div>
+            <button type="button" class="cv-preview-btn" id="openCv2"><img src="assets/cv/cv-preview.webp" alt="Preview of Ishtiak Rahman Azmi CV"/><span>OPEN CV ↗</span></button>
+          </article>
+
+          <article class="dash-card signature-card g-signature reveal"><div class="signature-mark">IA<sup>26</sup></div><p>Bold systems.<br>Clear stories.<br>Motion with purpose.</p></article>
+        </section>
+
+        <section class="testimonials-section reveal" id="testimonials">
+          <div class="section-head compact-head">
+            <div><span class="section-kicker">02 / CLIENT FEEDBACK</span><h2>TRUST BUILT THROUGH<br><em>REAL COLLABORATION.</em></h2></div>
+            <p>Five client perspectives across research, software, YouTube, vlogging and podcast work.</p>
+          </div>
+          <div class="client-marquee" aria-label="Client and collaborator logos"><div class="client-track" id="clientLogoTrack"></div></div>
+          <div class="testimonial-stage">
+            <div class="testimonial-main" id="testimonialMain"></div>
+            <div class="testimonial-side" id="testimonialSide"></div>
+          </div>
+          <div class="testimonial-controls"><button id="testimonialPrev" aria-label="Previous testimonial">←</button><div id="testimonialDots"></div><button id="testimonialNext" aria-label="Next testimonial">→</button></div>
+        </section>
+      </section>
+
+      <section class="view" id="workView" data-view-name="work">
+        <section class="work-hero reveal">
+          <div><span class="section-kicker">03 / SELECTED WORK</span><h2>DESIGN THAT<br><em>EARNS ATTENTION.</em></h2></div>
+          <p>Five highlighted projects first. Everything else follows once only, arranged as a dense visual wall with no unnecessary empty space.</p>
+        </section>
+
+        <section class="featured-wrap reveal">
+          <div class="featured-grid" id="featuredGrid"></div>
+        </section>
+
+        <section class="all-work reveal">
+          <div class="section-head compact-head">
+            <div><span class="section-kicker">FULL GRAPHICS PORTFOLIO</span><h2>STAND-ALONE WORK.<br><em>NO DUPLICATES.</em></h2></div>
+            <p>Client work and concept projects are clearly labeled. Click any card for its full project brief, direction and supporting visuals.</p>
+          </div>
+          <div class="filters" id="filters"></div>
+          <div class="masonry" id="projectGrid"></div>
+        </section>
+
+        <section class="video-section reveal" id="videoWork">
+          <div class="section-head compact-head">
+            <div><span class="section-kicker">04 / VIDEO & MOTION</span><h2>EDITING WITH<br><em>RHYTHM & INTENT.</em></h2></div>
+            <p>Client work is labeled separately from practice work. The section now includes five pieces, including the Dr. Bones YouTube feature.</p>
+          </div>
+          <div class="video-grid" id="videoGrid"></div>
+        </section>
+
+        <section class="vibing-gallery-section reveal" id="vibingGallery">
+          <div class="section-head compact-head">
+            <div><span class="section-kicker">05 / VIBING GALLERY</span><h2>VISUALS IN<br><em>FULL FLOW.</em></h2></div>
+            <p>A curated wall of typography, concept identity, editing studies, case-study visuals and motion experiments.</p>
+          </div>
+          <div class="vibing-wall" id="vibingWall" aria-label="Vibing Gallery curated design and motion work"></div>
+        </section>
+
+        <section class="work-footer reveal">
+          <p>Need visual design, campaign assets or edited video content?</p>
+          <div><a href="mailto:ishtiakrahmanazmiiiiiii@gmail.com">START A PROJECT ↗</a><button type="button" id="openCv3">VIEW CV ↗</button></div>
+        </section>
+      </section>
+    </main>
+
+    <nav class="mode-dock" aria-label="Portfolio section switcher"><button class="mode-btn active" data-mode="profile">PROFILE</button><button class="mode-btn" data-mode="work">WORK</button><i></i></nav>
+
+    <footer class="footer"><span>© 2026 ISHTIAK RAHMAN AZMI</span><span>VISUAL DESIGNER & VIDEO EDITOR</span></footer>
+  </div>
+
+  <dialog class="cv-modal" id="cvModal">
+    <button class="modal-close" id="closeCv" aria-label="Close CV">×</button>
+    <div class="cv-modal-inner"><img src="assets/cv/Ishtiak_Rahman_Azmi_CV.png" alt="Ishtiak Rahman Azmi CV"/><div class="cv-actions"><a href="assets/cv/Ishtiak_Rahman_Azmi_CV.png" download>DOWNLOAD CV ↓</a><button type="button" id="closeCv2">CLOSE</button></div></div>
+  </dialog>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
