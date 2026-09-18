@@ -92,12 +92,12 @@
     const pointInPoly=(x,y,poly)=>{let inside=false;for(let i=0,j=poly.length-1;i<poly.length;j=i++){const xi=poly[i][0],yi=poly[i][1],xj=poly[j][0],yj=poly[j][1];const hit=((yi>y)!==(yj>y))&&(x<(xj-xi)*(y-yi)/((yj-yi)||1e-9)+xi);if(hit)inside=!inside}return inside};
     const landDots=[];for(let lat=-55;lat<=75;lat+=4){for(let lon=-176;lon<=176;lon+=4){if(continents.some(poly=>pointInPoly(lon,lat,poly)))landDots.push([lon,lat])}}
     let rot=-118,drag=false,startX=0,startRot=0,hover=null,dpr=1,lastFrame=0,resumeAuto=1;
-    const AUTO_ROTATION_DEG_PER_SEC=2.15;
+    const AUTO_ROTATION_DEG_PER_SEC=10.5;
     const css=n=>getComputedStyle(root).getPropertyValue(n).trim();
     function resize(){const r=canvas.getBoundingClientRect();dpr=Math.min(window.devicePixelRatio||1,2);canvas.width=Math.round(r.width*dpr);canvas.height=Math.round(r.height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0)}
     function project(lon,lat,cx,cy,R){const lam=(lon-rot)*Math.PI/180,phi=lat*Math.PI/180;const x=Math.cos(phi)*Math.sin(lam),y=Math.sin(phi),z=Math.cos(phi)*Math.cos(lam);return{x:cx+x*R,y:cy-y*R,z}}
     function draw(ts=0){
-      const dt=lastFrame?Math.min((ts-lastFrame)/1000,.05):0;lastFrame=ts;
+      const dt=lastFrame?Math.min((ts-lastFrame)/1000,.12):0;lastFrame=ts;
       const r=canvas.getBoundingClientRect(),cx=r.width/2,cy=r.height/2,R=Math.min(r.width,r.height)*.405;ctx.clearRect(0,0,r.width,r.height);
       const halo=ctx.createRadialGradient(cx,cy,R*.86,cx,cy,R*1.26);halo.addColorStop(0,'rgba(255,255,255,.12)');halo.addColorStop(.64,'rgba(255,255,255,.05)');halo.addColorStop(1,'rgba(255,255,255,0)');ctx.fillStyle=halo;ctx.fillRect(cx-R*1.42,cy-R*1.42,R*2.84,R*2.84);
       ctx.save();ctx.beginPath();ctx.arc(cx,cy,R,0,Math.PI*2);ctx.clip();
