@@ -43,21 +43,64 @@
   }
 
   function setView(mode,animate=true){
-    const target=mode==='work'?q('#workView'):q('#profileView');
-    const change=()=>{
-      qa('.view').forEach(v=>v.classList.toggle('active',v===target));
-      qa('.mode-btn').forEach(b=>b.classList.toggle('active',b.dataset.mode===mode));
-      history.replaceState(null,'',mode==='work'?'#work':location.pathname);
-      window.scrollTo({top:0,behavior:'instant'}); observeReveal();
-    };
-    animate?runTransition(change):change();
-  }
+  const views={
+    profile:q('#profileView'),
+    work:q('#workView'),
+    gallery:q('#galleryView')
+  };
+
+  const target=views[mode]||views.profile;
+
+  const change=()=>{
+    qa('.view').forEach(v=>{
+      v.classList.toggle('active',v===target);
+    });
+
+    qa('[data-mode]').forEach(b=>{
+      b.classList.toggle('active',b.dataset.mode===mode);
+    });
+
+    const url=
+      mode==='profile'
+        ? location.pathname
+        : `${location.pathname}#${mode}`;
+
+    history.replaceState(null,'',url);
+
+    window.scrollTo({
+      top:0,
+      behavior:'instant'
+    });
+
+    observeReveal();
+  };
+
+  animate?runTransition(change):change();
+}
   function initViewSwitch(){
-    if(!q('#profileView'))return;
-    qa('.mode-btn').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.mode,true)));
-    qa('[data-view="profile"]').forEach(b=>b.addEventListener('click',()=>setView('profile',true)));
-    setView(location.hash==='#work'?'work':'profile',false);
-  }
+  if(!q('#profileView'))return;
+
+  qa('[data-mode]').forEach(b=>{
+    b.addEventListener('click',()=>{
+      setView(b.dataset.mode,true);
+    });
+  });
+
+  qa('[data-view="profile"]').forEach(b=>{
+    b.addEventListener('click',()=>{
+      setView('profile',true);
+    });
+  });
+
+  const requested=location.hash.replace('#','');
+
+  setView(
+    requested==='work'||requested==='gallery'
+      ? requested
+      : 'profile',
+    false
+  );
+}
 
   function initRoleCycler(){
     const el=q('#roleText');if(!el)return;

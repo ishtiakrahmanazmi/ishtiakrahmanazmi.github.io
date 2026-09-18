@@ -18,7 +18,7 @@
       <button class="brand-button" data-view="profile" aria-label="Open profile view">ISHTIAK<span>.</span></button>
       <div class="topbar-right">
         <div class="availability"><i></i>Available for Freelance, Remote & Contract Work</div>
-        <a class="instagram-button" href="https://www.instagram.com/ishtiak_rahman_azmi?stkn=MXE0Mm1pc3h0dDZiYQ%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener" aria-label="Open Ishtiak Rahman Azmi on Instagram">Instagram ↗</a>
+        
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme"><b></b><span>LIGHT</span></button>
       </div>
     </header>
@@ -173,22 +173,97 @@
           <div class="video-grid" id="videoGrid"></div>
         </section>
 
-        <section class="vibing-gallery-section reveal" id="vibingGallery">
-          <div class="section-head compact-head">
-            <div><span class="section-kicker">05 / VIBING GALLERY</span><h2>VISUALS IN<br><em>FULL FLOW.</em></h2></div>
-            <p>A curated wall of typography, concept identity, editing studies, case-study visuals and motion experiments.</p>
-          </div>
-          <div class="vibing-wall" id="vibingWall" aria-label="Vibing Gallery curated design and motion work"></div>
-        </section>
+        
 
         <section class="work-footer reveal">
           <p>Need visual design, campaign assets or edited video content?</p>
           <div><a href="mailto:ishtiakrahmanazmiiiiiii@gmail.com">START A PROJECT ↗</a><button type="button" id="openCv3">VIEW CV ↗</button></div>
         </section>
       </section>
+<section class="view" id="galleryView" data-view-name="gallery">
+
+  <section class="vibing-gallery-section reveal" id="vibingGallery">
+    <div class="section-head compact-head">
+      <div>
+        <span class="section-kicker">VIBING GALLERY</span>
+        <h2>VISUALS IN<br><em>FULL FLOW.</em></h2>
+      </div>
+
+      <p>
+        A curated wall of typography, concept identity,
+        editing studies, case-study visuals and motion experiments.
+      </p>
+    </div>
+
+    <div
+      class="vibing-wall"
+      id="vibingWall"
+      aria-label="Vibing Gallery curated design and motion work">
+    </div>
+  </section>
+
+</section>
     </main>
 
-    <nav class="mode-dock" aria-label="Portfolio section switcher"><button class="mode-btn active" data-mode="profile">PROFILE</button><button class="mode-btn" data-mode="work">WORK</button><i></i></nav>
+    <div class="dock-cluster">
+
+  <nav class="mode-dock" aria-label="Portfolio section switcher">
+
+    <button class="mode-btn active" data-mode="profile" type="button">
+      PROFILE
+    </button>
+
+    <button class="mode-btn" data-mode="work" type="button">
+      WORK
+    </button>
+
+  </nav>
+
+
+  <div class="dock-actions" aria-label="Portfolio quick links">
+
+    <button
+      class="dock-icon-btn"
+      data-mode="gallery"
+      type="button"
+      aria-label="Open Vibing Gallery"
+      title="Vibing Gallery">
+
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="4" y="4" width="6" height="6" rx="1"
+          fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <rect x="14" y="4" width="6" height="6" rx="1"
+          fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <rect x="4" y="14" width="6" height="6" rx="1"
+          fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <rect x="14" y="14" width="6" height="6" rx="1"
+          fill="none" stroke="currentColor" stroke-width="1.8"/>
+      </svg>
+
+    </button>
+
+
+    <a
+      class="dock-icon-btn"
+      href="https://www.instagram.com/ishtiak_rahman_azmi?stkn=MXE0Mm1pc3h0dDZiYQ%3D%3D&amp;utm_source=qr"
+      target="_blank"
+      rel="noopener"
+      aria-label="Open Instagram"
+      title="Instagram">
+
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3.5" y="3.5" width="17" height="17" rx="5"
+          fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <circle cx="12" cy="12" r="4"
+          fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <circle cx="17.4" cy="6.7" r="1.1" fill="currentColor"/>
+      </svg>
+
+    </a>
+
+  </div>
+
+</div>
 
     <footer class="footer"><span>© 2026 ISHTIAK RAHMAN AZMI</span><span>VISUAL DESIGNER & VIDEO EDITOR</span></footer>
   </div>
